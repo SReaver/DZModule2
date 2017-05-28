@@ -13,22 +13,22 @@ namespace DZModule2
             //string me = Console.ReadLine();
             //decimal.Parse(me, System.Globalization.CultureInfo.InvariantCulture);
             //Console.WriteLine(me);
-
-           
-
-
-
+            Console.WriteLine(1);
             Console.WriteLine(4+"  "+78+"  "+3);
             string tire = new string('-', 20);
             Console.WriteLine(tire);
+            Console.WriteLine(2);
             Console.WriteLine(5+"\n"+10+"\n"+21);
             Console.WriteLine(tire);
+            Console.WriteLine(3);
             Console.Write("Введите количество сантиметров: ");
             string metr = Console.ReadLine();
             Console.WriteLine("В введённом числе {0} полных метра(ов)", Int32.Parse(metr)/100);
             Console.WriteLine(tire);
+            Console.WriteLine(4);
             Console.WriteLine("В 234 днях {0} полных недель", 234/7);
             Console.WriteLine(tire);
+            Console.WriteLine(5);
             Console.Write("Введите двузначное число: ");
             int dvuchislo = Int32.Parse(Console.ReadLine());
             Console.WriteLine("В нём {0} - десятков, {1} - единиц (либо {2}, если имеется ввиду последняя цифра), {3} - сумма его цифр, {4} - произведение его цифр", 
@@ -38,9 +38,11 @@ namespace DZModule2
                 (dvuchislo / 10) + (dvuchislo - ((dvuchislo / 10) * 10)),
                 (dvuchislo / 10) * (dvuchislo - ((dvuchislo / 10) * 10)));
             Console.WriteLine(tire);
+            Console.WriteLine(6);
             bool A = true, B = false, C = false;
             Console.WriteLine((A||B).ToString() +" "+ (A && B).ToString()+ " " + (B || C).ToString());
             Console.WriteLine(tire);
+            Console.WriteLine(7);
             Console.Write("Введите размер стороны квадрата: ");
             double kvstor = Convert.ToDouble(Console.ReadLine());
             Console.Write("Введите размер радиуса круга: ");
@@ -54,6 +56,7 @@ namespace DZModule2
                 Console.WriteLine("Площадь круга ({1}) больше площади квадрата({0})", kvstor * kvstor, 3.14 * r1 * r1);
             }
             Console.WriteLine(tire);
+            Console.WriteLine(8);
             Console.Write("Введите массу первого тела: ");
             double mas1 = Convert.ToDouble(Console.ReadLine());
             Console.Write("Введите объём первого тела: ");
@@ -75,6 +78,7 @@ namespace DZModule2
                 Console.WriteLine("Плотность второго тела ({1}) выше плотности первого тела ({0})", mas1 / ob1, mas2 / ob2);
             }
             Console.WriteLine(tire);
+            Console.WriteLine(9);
             Console.Write("Введите напряжение первой цепи: ");
             double u1 = Convert.ToDouble(Console.ReadLine());
             Console.Write("Введите сопротивление первой цепи: ");
@@ -96,6 +100,7 @@ namespace DZModule2
                 Console.WriteLine("Сила тока второй цепи ({1}) меньше чем сила тока первой цепи ({0})", u1 / res1, u2 / res2);
             }
             Console.WriteLine(tire);
+            Console.WriteLine(10);
             for (int i = 20; i <= 35; i++)
             {
                 Console.WriteLine(i);
@@ -144,14 +149,18 @@ namespace DZModule2
                 Console.WriteLine("Второе число должно быть меньше первого!");
             }
             Console.WriteLine(tire);
+
+            Console.WriteLine(11);
             Console.Write("Введите число X для решения уравнения: ");
             double urav = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Y = ", (7 * (urav * urav) - (3 * urav) + 4));
+            Console.WriteLine("Y = "+ (7 * (urav * urav) - (3 * urav) + 4));
             Console.WriteLine(tire);
+            Console.WriteLine(12);
             Console.Write("Введите радиус окружности: ");
             double r3 = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Длина окружности равна {0}, площадь круга равна {1}", 2*3.14*r3,3.14*r3*r3);
             Console.WriteLine(tire);
+            Console.WriteLine(16);
             Console.Write("Введите многозначное целое число: ");
             string mnogo = Console.ReadLine();
             int sumMnogo = 0;
@@ -167,12 +176,22 @@ namespace DZModule2
             Console.WriteLine("Задача найти исходное число, в результате манипуляций с которым получилось число 456.");
             int trichislo = 456;
             int perv = trichislo / 100;
-            Console.WriteLine(perv);
+            //Console.WriteLine(perv);
             int vtor = (trichislo - perv * 100) / 10;
-            Console.WriteLine(vtor);
+            //Console.WriteLine(vtor);
             int tret = (trichislo % 10);
-            Console.WriteLine(tret);
+            //Console.WriteLine(tret);
             Console.WriteLine(perv + "" + tret + "" + vtor);
+            Console.WriteLine(tire);
+            Console.WriteLine(18);
+            bool x=true, y=true;
+            Console.WriteLine((!x && !y).ToString() + " " + (x || (!x && y)).ToString() + " " + ((!x && y) || y).ToString());
+            x = true; y = false;
+            Console.WriteLine((!x && !y).ToString() + " " + (x || (!x && y)).ToString() + " " + ((!x && y) || y).ToString());
+            x = false; y = true;
+            Console.WriteLine((!x && !y).ToString() + " " + (x || (!x && y)).ToString() + " " + ((!x && y) || y).ToString());
+            x = false; y = false;
+            Console.WriteLine((!x && !y).ToString() + " " + (x || (!x && y)).ToString() + " " + ((!x && y) || y).ToString());
         }
     }
 }
