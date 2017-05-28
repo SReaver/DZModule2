@@ -10,6 +10,14 @@ namespace DZModule2
     {
         static void Main(string[] args)
         {
+            //string me = Console.ReadLine();
+            //decimal.Parse(me, System.Globalization.CultureInfo.InvariantCulture);
+            //Console.WriteLine(me);
+
+           
+
+
+
             Console.WriteLine(4+"  "+78+"  "+3);
             string tire = new string('-', 20);
             Console.WriteLine(tire);
@@ -58,10 +66,113 @@ namespace DZModule2
             {
                 Console.WriteLine("Плотность первого тела ({0}) выше плотности второго тела ({1})", mas1 / ob1 , mas2 / ob2);
             }
+            else if (mas1 / ob1 == mas2 / ob2)
+            {
+                Console.WriteLine("Плотности равны.");
+            }
             else
             {
                 Console.WriteLine("Плотность второго тела ({1}) выше плотности первого тела ({0})", mas1 / ob1, mas2 / ob2);
             }
+            Console.WriteLine(tire);
+            Console.Write("Введите напряжение первой цепи: ");
+            double u1 = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Введите сопротивление первой цепи: ");
+            double res1 = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Введите напряжение второй цепи: ");
+            double u2 = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Введите сопротивление второй цепи: ");
+            double res2 = Convert.ToDouble(Console.ReadLine());
+            if (u1/res1<u2/res2)
+            {
+                Console.WriteLine("Сила тока первой цепи ({0}) меньше чем сила тока второй цепи ({1})", u1 / res1 , u2 / res2);
+            }
+            else if (u1 / res1 == u2 / res2)
+            {
+                Console.WriteLine("Сила тока одинакоава.");
+            }
+            else
+            {
+                Console.WriteLine("Сила тока второй цепи ({1}) меньше чем сила тока первой цепи ({0})", u1 / res1, u2 / res2);
+            }
+            Console.WriteLine(tire);
+            for (int i = 20; i <= 35; i++)
+            {
+                Console.WriteLine(i);
+            }
+            Console.Write("Введите целое число, до которого необходимо возвести в квадрат все чила от 10: ");
+            int kvadrat = Int32.Parse(Console.ReadLine());
+            if (kvadrat>10)
+            {
+                for (int i = 10; i <= kvadrat; i++)
+                {
+                    int result = i * i;
+                    Console.WriteLine(result);
+                }
+            }
+            else
+            {
+                Console.WriteLine("Число должно быть больше 10");
+            }
+            Console.Write("Введите целое число, от которого необходимо возвести в третью степень все чила до 50: ");
+            int tre = Int32.Parse(Console.ReadLine());
+            if (tre < 50)
+            {
+                for (int i = tre; i <= 50; i++)
+                {
+                    int result = i * i * i;
+                    Console.WriteLine(result);
+                }
+            }
+            else
+            {
+                Console.WriteLine("Число должно быть меньше 50");
+            }
+            Console.Write("Введите целое число, от которого необходимо начать распечатку чисел: ");
+            int nach = Int32.Parse(Console.ReadLine());
+            Console.Write("Введите целое число (больше первого), до которого необходимо завершить распечатку чисел: ");
+            int kon = Int32.Parse(Console.ReadLine());
+            if (kon > nach)
+            {
+                for (int i = nach; i <= kon; i++)
+                {
+                    Console.WriteLine(i);
+                }
+            }
+            else
+            {
+                Console.WriteLine("Второе число должно быть меньше первого!");
+            }
+            Console.WriteLine(tire);
+            Console.Write("Введите число X для решения уравнения: ");
+            double urav = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Y = ", (7 * (urav * urav) - (3 * urav) + 4));
+            Console.WriteLine(tire);
+            Console.Write("Введите радиус окружности: ");
+            double r3 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Длина окружности равна {0}, площадь круга равна {1}", 2*3.14*r3,3.14*r3*r3);
+            Console.WriteLine(tire);
+            Console.Write("Введите многозначное целое число: ");
+            string mnogo = Console.ReadLine();
+            int sumMnogo = 0;
+            int multMnogo = 1;
+            for (int i = 0; i < mnogo.Length; i++)
+            {
+                sumMnogo = sumMnogo + (int)char.GetNumericValue(mnogo[i]);
+                multMnogo = multMnogo * (int)char.GetNumericValue(mnogo[i]);
+            }
+            Console.WriteLine("Сумма всех числе равна {0}, произведение всех числе равно {1}.", sumMnogo, multMnogo);
+            Console.WriteLine(tire);
+            Console.WriteLine(17);
+            Console.WriteLine("Задача найти исходное число, в результате манипуляций с которым получилось число 456.");
+            int trichislo = 456;
+            int perv = trichislo / 100;
+            Console.WriteLine(perv);
+            int vtor = (trichislo - perv * 100) / 10;
+            Console.WriteLine(vtor);
+            int tret = (trichislo % 10);
+            Console.WriteLine(tret);
+            Console.WriteLine(perv + "" + tret + "" + vtor);
         }
     }
 }
